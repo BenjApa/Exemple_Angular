@@ -1,0 +1,19 @@
+<h2>Article</h2>
+<h3><i>Creation</i></h3>
+<form [formGroup]="articleForm" (ngSubmit)="createArticle()">
+  <div class="form-group">
+    <label class="center-block">Titre:
+      <input class="form-control" formControlName="title">
+    </label>
+    <br />
+    <label class="center-block">Contenu:
+      <textarea class="form-control" formControlName="content"></textarea>
+    </label>
+    <br />
+    <label class="center-block">Auteurs:
+      <input class="form-control" formControlName="authors">
+    </label>
+    <br />
+    <button class="btn btn-success" [disabled]="articleForm.invalid" type="submit" >Save</button>
+  </div>
+</form>

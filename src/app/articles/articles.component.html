@@ -1,0 +1,8 @@
+<form id="filter">
+<input type="text"  placeholder="Rechercher" [(ngModel)]="term" [ngModelOptions]="{standalone:true }">
+</form>
+
+
+
+<app-article *ngFor="let article of this.articles | filter : term" [article]="article" (deletedArticle)="delete($event)">
+  </app-article>
